@@ -28,7 +28,7 @@ title := "ECR registry must use an approved scanning mode"
 description := "The account-level registry scanning mode must be one of the approved types. ENHANCED (Inspector-backed) scanning provides continuous vulnerability detection beyond basic on-push scanning."
 
 risk_templates := [{
-	"name":            "unapproved_registry_scan_type",
+	"name":            "ECR registry is not using an approved scanning mode",
 	"title":           "ECR registry is not using an approved scanning mode",
 	"statement":       "The registry scanning mode does not meet the required standard, reducing vulnerability detection coverage and removing continuous re-scanning of images that have already been pushed.",
 	"likelihood_hint": "high",
