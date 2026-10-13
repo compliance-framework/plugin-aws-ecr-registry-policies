@@ -1,0 +1,7 @@
+lisa-selfreview:
+Self-review pass 1 (verdict: approve, no findings).
+- The four callers and release-please-config.json are byte-identical to the reviewed and merged plugin-file-attestation-policies#4 (mock-plugin-policies-1 copies with pins at v1.5.2); config has no drift from release-please/defaults.json at v1.5.2.
+- Manifest seeded at 0.1.0 = releases/latest v0.1.0 (final, vX.Y.Z), tag commit d0cbc2a is an ancestor of main; no bootstrap-sha.
+- ci.yml: only the three pins move v1.5.1 -> v1.5.2; release-checks already present.
+- Bundle: OPA 1.6.0 (old) and 1.14.1 (new) `-b policies` builds are byte-identical (sha256 1d44b177...).
+- README does not describe releasing; unchanged.
