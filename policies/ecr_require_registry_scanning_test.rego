@@ -5,7 +5,7 @@ test_pass_enhanced_scanning if {
 		"resource_type": "ecr-registry",
 		"registry_scan_type": "ENHANCED",
 	}
-		with data.approved_registry_scan_types as ["ENHANCED"]
+		with data.approved_registry_scan_types as ["ENHANCED"] # regal ignore:unresolved-reference
 }
 
 test_fail_basic_when_enhanced_required if {
@@ -13,7 +13,7 @@ test_fail_basic_when_enhanced_required if {
 		"resource_type": "ecr-registry",
 		"registry_scan_type": "BASIC",
 	}
-		with data.approved_registry_scan_types as ["ENHANCED"]
+		with data.approved_registry_scan_types as ["ENHANCED"] # regal ignore:unresolved-reference
 }
 
 test_pass_basic_when_approved if {
@@ -21,7 +21,7 @@ test_pass_basic_when_approved if {
 		"resource_type": "ecr-registry",
 		"registry_scan_type": "BASIC",
 	}
-		with data.approved_registry_scan_types as ["BASIC", "ENHANCED"]
+		with data.approved_registry_scan_types as ["BASIC", "ENHANCED"] # regal ignore:unresolved-reference
 }
 
 test_fail_empty_scan_type if {
@@ -29,7 +29,7 @@ test_fail_empty_scan_type if {
 		"resource_type": "ecr-registry",
 		"registry_scan_type": "",
 	}
-		with data.approved_registry_scan_types as ["ENHANCED"]
+		with data.approved_registry_scan_types as ["ENHANCED"] # regal ignore:unresolved-reference
 }
 
 test_no_match_repository_resource if {
@@ -37,5 +37,5 @@ test_no_match_repository_resource if {
 		"resource_type": "ecr-repository",
 		"registry_scan_type": "BASIC",
 	}
-		with data.approved_registry_scan_types as ["ENHANCED"]
+		with data.approved_registry_scan_types as ["ENHANCED"] # regal ignore:unresolved-reference
 }
