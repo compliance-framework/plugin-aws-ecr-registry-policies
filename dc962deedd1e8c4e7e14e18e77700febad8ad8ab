@@ -5,3 +5,6 @@ Self-review pass 1 (verdict: approve, no findings).
 - ci.yml: only the three pins move v1.5.1 -> v1.5.2; release-checks already present.
 - Bundle: OPA 1.6.0 (old) and 1.14.1 (new) `-b policies` builds are byte-identical (sha256 1d44b177...).
 - README does not describe releasing; unchanged.
+
+lisa-design:
+Default branch is main. Seed 0.1.0 from releases/latest. GitHub release asset bundle.tar.gz is dropped by the shared workflow (reported, not fixed: shared side).
